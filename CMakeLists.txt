@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.5)
 
-project (compose CXX)
+project (compose CXX C)
 set (CMAKE_CXX_STANDARD 17)
 find_package(MPI REQUIRED COMPONENTS C)
 
