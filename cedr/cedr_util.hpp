@@ -5,6 +5,7 @@
 #define INCLUDE_CEDR_UTIL_HPP
 
 #include <sstream>
+#include <iostream>
 
 #include "cedr_kokkos.hpp"
 #include "cedr_mpi.hpp"
@@ -91,7 +92,7 @@ template <typename T, typename ExeSpace>
 struct RawArrayRaft {
   typedef typename cedr::impl::DeviceType<ExeSpace>::type Device;
   typedef Kokkos::View<T*, Device> List;
-  
+
   RawArrayRaft (T* a, const Int n)
     : a_(a), n_(n)
   {
